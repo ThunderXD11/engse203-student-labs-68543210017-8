@@ -1,16 +1,16 @@
 {
   "week": "week-02",
   "title": "Modern JavaScript Learning Dashboard",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
-  "originalRepoUrl": "",
-  "originalCommit": "",
-  "pullRequestUrl": "",
-  "submissionTag": "",
-  "testStatus": "not-tested",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/ThunderXD11/engse203-lab02-68543210017-8",
+  "originalCommit": "2f236167c6225bae5914c1808cea0fd0f22b681a",
+  "pullRequestUrl": "https://github.com/ThunderXD11/engse203-student-labs-68543210017-8/pull/2",
+  "submissionTag": "lab-02-submission-v1",
+  "testStatus": "pass",
   "notes": "นำ Vite build output ที่มี index.html เข้า publish/",
   "pageUrl": "https://ThunderXD11.github.io/engse203-student-labs-685432100178/labs/week-02/",
   "sourceUrl": "https://github.com/ThunderXD11/engse203-student-labs-685432100178/tree/lab/week-02/labs/week-02/source",
-  "hasPublish": false,
-  "sourceEntries": 0
+  "hasPublish": true,
+  "sourceEntries": 10
 }
