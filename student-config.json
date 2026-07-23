@@ -1,9 +1,9 @@
 {
   "course": "ENGSE203",
-  "studentId": "STUDENT-ID",
-  "studentName": "ชื่อ-นามสกุล",
-  "section": "SEC-X",
-  "githubUsername": "GITHUB-USERNAME",
-  "repositoryName": "engse203-student-labs-STUDENT-ID",
-  "repositoryMode": "new-course"
+  "studentId": "685432100178",
+  "studentName": "วรสิทธิ์ บุญยปรีดี",
+  "section": "SEC2",
+  "githubUsername": "ThunderXD11",
+  "repositoryName": "engse203-student-labs-685432100178",
+  "repositoryMode": "migration"
 }
