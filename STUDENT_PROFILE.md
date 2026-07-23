@@ -3,10 +3,10 @@
 | รายการ | ข้อมูล |
 |---|---|
 | รายวิชา | ENGSE203 การเขียนโปรแกรมสำหรับวิศวกรซอฟต์แวร์ |
-| รหัสนักศึกษา | STUDENT-ID |
-| ชื่อ-นามสกุล | ชื่อ-นามสกุล |
-| Section | SEC-X |
-| GitHub Username | GITHUB-USERNAME |
-| Repository | `engse203-student-labs-STUDENT-ID` |
-
-> ไฟล์นี้จะถูกปรับข้อมูลเมื่อรัน `npm run setup`
+| รหัสนักศึกษา | 685432100178 |
+| ชื่อ-นามสกุล | วรสิทธิ์ บุญยปรีดี |
+| Section | SEC2 |
+| GitHub Username | ThunderXD11 |
+| Repository | `engse203-student-labs-685432100178` |
+| Mode | `migration` |
+| Pages Hub | https://ThunderXD11.github.io/engse203-student-labs-685432100178/ |
