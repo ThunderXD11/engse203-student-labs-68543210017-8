@@ -1,0 +1,308 @@
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #111827;
+  background: #f0fdf4; /* ปรับพื้นหลังเป็นโทน Mint สว่างสบายตา */
+  font-synthesis: none;
+  
+  /* 🎨 Color Palette ใหม่ (Emerald & Indigo Theme) */
+  --navy: #064e3b;      /* เขียวเข้มพรีเมียม */
+  --blue: #059669;      /* สีหลัก: Emerald Green */
+  --teal: #4f46e5;      /* Accent: Indigo Blue */
+  --surface: #ffffff;
+  --border: #cbd5e1;
+  --muted: #64748b;
+  --danger: #dc2626;
+  --shadow: 0 4px 14px -2px rgba(5, 150, 105, 0.08);
+}
+
+body { 
+  margin: 0; 
+  min-width: 320px; 
+  min-height: 100vh; 
+  line-height: 1.5;
+}
+
+button, input, select { 
+  font: inherit; 
+}
+
+button { 
+  cursor: pointer; 
+  transition: all 0.15s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.container { 
+  width: min(100% - 2rem, 72rem); 
+  margin-inline: auto; 
+}
+
+/* Hero Section */
+.hero { 
+  padding: 3rem 0; 
+  color: white; 
+  background: linear-gradient(135deg, #022c22, #059669, #4f46e5); /* Gradient เขียวมรกตไล่ไป Indigo */
+}
+
+.hero h1 { 
+  margin: .25rem 0; 
+  font-size: clamp(2rem, 6vw, 3.5rem); 
+  line-height: 1.1; 
+  letter-spacing: -0.02em;
+}
+
+.hero p:last-child { 
+  max-width: 60ch; 
+  margin-bottom: 0; 
+  opacity: 0.92;
+}
+
+.eyebrow { 
+  margin: 0; 
+  font-size: .75rem; 
+  font-weight: 800; 
+  letter-spacing: .15em; 
+  text-transform: uppercase;
+}
+
+.eyebrow.dark { 
+  color: var(--blue); 
+}
+
+.page-content { 
+  padding-block: 2rem 3rem; 
+}
+
+/* Summary Grid */
+.summary-grid { 
+  display: grid; 
+  grid-template-columns: repeat(2, minmax(0, 1fr)); 
+  gap: 1rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.summary-card { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  gap: .75rem; 
+  padding: 1.25rem; 
+  border: 1px solid var(--border); 
+  border-radius: .85rem; 
+  background: var(--surface); 
+  box-shadow: var(--shadow);
+}
+
+.summary-card span { 
+  color: var(--muted); 
+  font-size: 0.9rem;
+}
+
+.summary-card strong { 
+  color: var(--blue); 
+  font-size: 1.75rem; 
+  font-weight: 700;
+}
+
+/* Workspace Grid & Panels */
+.workspace-grid { 
+  display: grid; 
+  grid-template-columns: 1fr; 
+  gap: 1.5rem; 
+  align-items: start; 
+}
+
+.panel { 
+  padding: 1.5rem; 
+  border: 1px solid var(--border); 
+  border-radius: 1rem; 
+  background: var(--surface); 
+  box-shadow: var(--shadow); 
+}
+
+.panel h2 { 
+  margin: 0 0 1rem; 
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  color: #0f172a;
+}
+
+.section-heading { 
+  display: flex; 
+  flex-direction: column; 
+  gap: .75rem; 
+  margin-bottom: 1rem; 
+}
+
+/* Form Fields & Controls */
+.field { 
+  display: grid; 
+  gap: .4rem; 
+  margin-bottom: 1rem; 
+}
+
+label { 
+  font-weight: 600; 
+  font-size: 0.9rem;
+}
+
+input, select { 
+  width: 100%; 
+  padding: .7rem .9rem; 
+  border: 1px solid var(--border); 
+  border-radius: .6rem; 
+  background: white; 
+  color: inherit; 
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input:focus, select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.2);
+  outline: none;
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible { 
+  outline: 2px solid var(--blue); 
+  outline-offset: 2px; 
+}
+
+[aria-invalid="true"] { 
+  border-color: var(--danger); 
+}
+
+.error { 
+  min-height: 1.1rem; 
+  color: var(--danger); 
+  font-size: 0.85rem;
+}
+
+.status { 
+  min-height: 1.35rem; 
+  margin-bottom: 0; 
+  font-weight: 600; 
+}
+
+form > button, .filter-active { 
+  border: 0; 
+  border-radius: .6rem; 
+  padding: .7rem 1.2rem; 
+  color: white; 
+  background: var(--blue); 
+  font-weight: 600; 
+}
+
+form > button:hover, .filter-active:hover {
+  background: #047857;
+}
+
+/* Filters & Task Cards */
+.filter-bar { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .5rem; 
+}
+
+.filter-button { 
+  border: 1px solid var(--border); 
+  border-radius: .6rem; 
+  padding: .5rem .85rem; 
+  color: #334155; 
+  background: #f1f5f9; 
+  font-weight: 600; 
+  font-size: 0.9rem;
+}
+
+.filter-button:hover {
+  background: #e2e8f0;
+}
+
+.task-list { 
+  display: grid; 
+  gap: .85rem; 
+}
+
+.task-card { 
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: space-between; 
+  gap: 1rem; 
+  padding: 1.1rem; 
+  border: 1px solid var(--border); 
+  border-radius: .8rem; 
+  background: #f8fafc; 
+}
+
+.task-card h3 { 
+  margin: .3rem 0 .2rem; 
+  font-size: 1rem; 
+  font-weight: 600;
+}
+
+.task-card p { 
+  margin: 0; 
+  color: var(--muted); 
+  font-size: 0.9rem;
+}
+
+/* Badges - เปลี่ยนพาเลตสีสถานะใหม่ */
+.badge-row { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .4rem; 
+}
+
+.badge { 
+  display: inline-flex; 
+  border-radius: 999px; 
+  padding: .2rem .65rem; 
+  font-size: .75rem; 
+  font-weight: 700; 
+  letter-spacing: 0.02em;
+}
+
+.status-todo { color: #9a3412; background: #ffedd5; }    /* ส้ม Amber */
+.status-doing { color: #3730a3; background: #e0e7ff; }   /* Indigo */
+.status-done { color: #065f46; background: #d1fae5; }    /* Emerald */
+.priority-high { color: #9f1239; background: #ffe4e6; }  /* Rose Red */
+
+.danger-button { 
+  flex: 0 0 auto; 
+  border: 0; 
+  border-radius: .55rem; 
+  padding: .5rem .75rem; 
+  color: var(--danger); 
+  background: #fef2f2; 
+  font-weight: 600; 
+  font-size: 0.85rem;
+}
+
+.danger-button:hover {
+  background: #fee2e2;
+}
+
+.empty-state { 
+  padding: 2rem; 
+  border: 2px dashed var(--border); 
+  border-radius: .8rem; 
+  text-align: center; 
+  color: var(--muted); 
+}
+
+/* Responsive Rules */
+@media (min-width: 48rem) {
+  .summary-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .workspace-grid { grid-template-columns: minmax(17rem, .75fr) minmax(0, 1.4fr); }
+  .section-heading { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
