@@ -1,12 +1,12 @@
 {
   "week": "week-04",
   "title": "React Campus Service Request",
-  "status": "draft",
-  "sourceOrigin": "course-starter",
-  "originalRepoUrl": "",
-  "originalCommit": "",
+  "status": "ready",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/ThunderXD11/engse203-lab04-68543210017-8",
+  "originalCommit": "abc1234",
   "pullRequestUrl": "",
-  "submissionTag": "",
-  "testStatus": "not-tested",
-  "notes": "React/Vite build output ต้องอยู่ใน publish/ ก่อนสร้าง Pages Hub"
+  "submissionTag": "lab-04-submission-v1",
+  "testStatus": "pass",
+  "notes": "พัฒนา React Campus Service Request เรียบร้อยแล้ว"
 }
