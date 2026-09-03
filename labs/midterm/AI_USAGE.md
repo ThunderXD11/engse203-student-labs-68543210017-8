@@ -45,7 +45,10 @@
 | `15:36` | B1 | "แก้ URL บนหน้า RequestDetail แล้วข้อมูลไม่ยอมเปลี่ยน" | ให้ตรวจสอบ Dependency Array ของ `useEffect` ว่าได้ใส่ ID หรือยัง| แก้ไข `useEffect` เพิ่ม `[requestId, reloadKey]` เข้าไปใน dependency · ลองแก้ URL จาก REQ-101 เป็น REQ-102 แล้วข้อมูลเปลี่ยนทันที |
 | `15:56` | B1 | "กดลบการ์ดแล้วแผงสรุปไม่ลดตัวเลขลง" | บอกว่า `useMemo` ที่คำนวณค่าสรุปไม่มี Dependency Array ติดตามข้อมูล| เพิ่ม `[requests]` ใส่ใน Dependency Array ของ `useMemo` ใน `DashboardPage.jsx` · ทดลองกดลบการ์ดแล้วตัวเลขลดลงทันที |
 | `16:08` | B1 | "Uncaught TypeError: requests.filter is not a function ตอนกดลบเกิดจากอะไร" | อธิบายว่า `setRequests` ได้รับค่าที่ไม่ใช่ Array (กลายเป็น `undefined`) | แก้ไขฟังก์ชัน `handleDelete` ให้ใช้ `setRequests(prev => prev.filter(...))`· ลองกดลบแล้วการ์ดหาย และหน้าเว็บไม่ crash พัง |
-| `16:27` | B2 | "วิธีทำช่องค้นหาใน React กรองร่วมกับตัวกรองสถานะ" | ให้ใช้ .filter() ตรวจสอบเงื่อนไขทั้งสถานะและคำค้นหาพร้อมกัน | นำไปเขียนเงื่อนไขกรองเพิ่ม State สำหรับเก็บข้อความค้นหา |
+| `16:24` | B2 | "วิธีสร้าง state และช่อง input ค้นหาใน React" | แนะนำให้สร้าง `useState('')` และวาง `<input value={searchText} onChange=... />` | เพิ่ม `useState` และแปะช่อง `<input>` ใน `DashboardPage.jsx` · พิมพ์ตัวอักษรแล้วข้อความแสดงในช่องตามที่พิมพ์จริง |
+| `16:45` | B2 | "วิธีเขียน .filter() กรองข้อมูล array จาก searchText ค้นหาประเภทหรือสถานที่" | ให้แปลงข้อความด้วย `.toLowerCase()` และใช้ `.includes()` เช็ค `requestType` กับ `location` | สร้างตัวแปร `filteredRequests` ด้วยเงื่อนไข `.includes(query)` · พิมพ์ "ซ่อม" แล้วการ์ดลดเหลือ 2 ใบตรงตามโจทย์ |
+| `16:49` | B2 | "ทำยังไงให้ตัวกรองสถานะ (statusFilter) กับช่องค้นหา (searchText) ทำงานร่วมกัน" | ให้สร้างเงื่อนไข `matchesStatus && matchesSearch` มัดรวมใน `.filter()` | ปรับโค้ด `filteredRequests` ให้เช็คทั้งสถานะและคำค้นหาพร้อมกัน · เลือก "เสร็จสิ้น" + พิมพ์ "ซ่อม" เหลือ REQ-104 ใบเดียว |
+| `17:01` | B2 | "ถ้าค้นหาไม่เจอ ให้ขึ้นข้อความเตือน และแผงสรุปไม่เปลี่ยน ทำยังไง" | ให้เช็ค `filteredRequests.length > 0` ด้วย Ternary Operator และส่ง `requests` ให้ `SummaryPanel` | ใส่ `<p className="empty-message">` ตอนหาไม่เจอ · ลองพิมพ์ "zzz" ขึ้นข้อความไม่พบ แต่แผงสรุปยังเป็น 5 ใบเท่าเดิม |
 ---
 
 ## คำรับรอง
