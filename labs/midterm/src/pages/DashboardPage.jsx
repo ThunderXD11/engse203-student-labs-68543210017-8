@@ -48,7 +48,7 @@ function DashboardPage() {
     pending: requests.filter((request) => request.status === 'pending').length,
     inProgress: requests.filter((request) => request.status === 'in-progress').length,
     completed: requests.filter((request) => request.status === 'completed').length,
-  }), []);
+  }), [requests]);
 
   const filteredRequests = statusFilter === 'all'
     ? requests
@@ -62,7 +62,7 @@ function DashboardPage() {
   async function handleDelete(requestId) {
     try {
       const nextRequests = deleteRequest(requestId);
-      setRequests(nextRequests);
+      setRequests(prevRequests => prevRequests.filter(request => request.id !== requestId));
       setNotice(`ลบคำร้อง ${requestId} แล้ว`);
     } catch (error) {
       setNotice(error instanceof Error ? error.message : 'ลบคำร้องไม่สำเร็จ');
