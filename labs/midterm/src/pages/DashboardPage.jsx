@@ -123,7 +123,9 @@ function DashboardPage() {
                   />
               </div>
             {/* TODO B3: ส่ง onAcknowledge={handleAcknowledge} ให้ RequestList เพื่อให้การ์ด pending มีปุ่ม "รับเรื่อง" */}
-            <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
+            {filteredRequests.length > 0 ? (
+            <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />) : (
+            <p className="empty-message">ไม่พบคำร้องที่ตรงกับการค้นหา</p> )}
           </section>
         </>
       )}
