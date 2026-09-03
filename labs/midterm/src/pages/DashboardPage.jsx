@@ -51,9 +51,15 @@ function DashboardPage() {
     completed: requests.filter((request) => request.status === 'completed').length,
   }), [requests]);
 
-  const filteredRequests = statusFilter === 'all'
-    ? requests
-    : requests.filter((request) => request.status === statusFilter);
+  const query = searchText.trim().toLowerCase();
+
+  const filteredRequests = requests.filter((request) => {
+    return (
+      query === '' ||
+      request.requestType.toLowerCase().includes(query) ||
+      request.location.toLowerCase().includes(query)
+    );
+  });
 
   function handleRetry() {
     if (scenario) setSearchParams({});

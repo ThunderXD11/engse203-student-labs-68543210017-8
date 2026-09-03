@@ -45,7 +45,7 @@
 | `15:36` | B1 | "แก้ URL บนหน้า RequestDetail แล้วข้อมูลไม่ยอมเปลี่ยน" | ให้ตรวจสอบ Dependency Array ของ `useEffect` ว่าได้ใส่ ID หรือยัง| แก้ไข `useEffect` เพิ่ม `[requestId, reloadKey]` เข้าไปใน dependency · ลองแก้ URL จาก REQ-101 เป็น REQ-102 แล้วข้อมูลเปลี่ยนทันที |
 | `15:56` | B1 | "กดลบการ์ดแล้วแผงสรุปไม่ลดตัวเลขลง" | บอกว่า `useMemo` ที่คำนวณค่าสรุปไม่มี Dependency Array ติดตามข้อมูล| เพิ่ม `[requests]` ใส่ใน Dependency Array ของ `useMemo` ใน `DashboardPage.jsx` · ทดลองกดลบการ์ดแล้วตัวเลขลดลงทันที |
 | `16:08` | B1 | "Uncaught TypeError: requests.filter is not a function ตอนกดลบเกิดจากอะไร" | อธิบายว่า `setRequests` ได้รับค่าที่ไม่ใช่ Array (กลายเป็น `undefined`) | แก้ไขฟังก์ชัน `handleDelete` ให้ใช้ `setRequests(prev => prev.filter(...))`· ลองกดลบแล้วการ์ดหาย และหน้าเว็บไม่ crash พัง |
-
+| `16:27` | B2 | "วิธีทำช่องค้นหาใน React กรองร่วมกับตัวกรองสถานะ" | ให้ใช้ .filter() ตรวจสอบเงื่อนไขทั้งสถานะและคำค้นหาพร้อมกัน | นำไปเขียนเงื่อนไขกรองเพิ่ม State สำหรับเก็บข้อความค้นหา |
 ---
 
 ## คำรับรอง
