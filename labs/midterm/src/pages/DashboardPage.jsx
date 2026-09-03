@@ -20,6 +20,7 @@ function DashboardPage() {
   // TODO B2: เพิ่ม state สำหรับข้อความค้นหา ที่นี่
   const [errorMessage, setErrorMessage] = useState('');
   const [notice, setNotice] = useState('');
+  const [searchText, setSearchText] = useState('');
 
   useEffect(() => {
     let ignore = false;
@@ -106,6 +107,13 @@ function DashboardPage() {
               <FilterBar value={statusFilter} onFilterChange={setStatusFilter} />
             </div>
             {/* TODO B2: วางช่อง <input> ค้นหา ตรงนี้ (เหนือรายการ) แล้วกรองร่วมกับตัวกรองสถานะ ค้นจากประเภท/สถานที่ */}
+            <div className="search-box">
+              <input type="text"
+                placeholder="ค้นหาจากประเภท/สถานที่"
+                  value={searchText} onChange={(e) => setSearchText(e.target.value)}
+                     className="input-search"
+                  />
+              </div>
             {/* TODO B3: ส่ง onAcknowledge={handleAcknowledge} ให้ RequestList เพื่อให้การ์ด pending มีปุ่ม "รับเรื่อง" */}
             <RequestList requests={filteredRequests} onDeleteRequest={handleDelete} />
           </section>
