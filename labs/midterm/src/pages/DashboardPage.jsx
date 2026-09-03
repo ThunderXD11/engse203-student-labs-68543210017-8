@@ -47,7 +47,7 @@ function DashboardPage() {
     total: requests.length,
     pending: requests.filter((request) => request.status === 'pending').length,
     inProgress: requests.filter((request) => request.status === 'in-progress').length,
-    completed: requests.filter((request) => request.status === 'in-progress').length,
+    completed: requests.filter((request) => request.status === 'completed').length,
   }), []);
 
   const filteredRequests = statusFilter === 'all'
