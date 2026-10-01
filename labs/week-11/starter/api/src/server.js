@@ -5,7 +5,7 @@ import { loadSeed } from './services/requestService.js';
 await loadSeed();
 const app = createApp();
 
-app.listen(config.port, () => {
-  console.log(`Campus Service API พร้อมที่ http://localhost:${config.port}`);
-  console.log(`อนุญาตให้เรียกจาก: ${config.corsOrigin}`);
+app.listen((config.port ?? 3001), () => {
+  console.log(`Campus Service API พร้อมที่ http://localhost:${(config.port ?? 3001)}`);
+  console.log(`อนุญาตให้เรียกจาก: ${(config.corsOrigin ?? "http://localhost:5173")}`);
 });

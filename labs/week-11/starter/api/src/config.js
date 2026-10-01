@@ -9,6 +9,7 @@
  */
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import 'dotenv/config';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const API_ROOT = path.resolve(HERE, '..');
