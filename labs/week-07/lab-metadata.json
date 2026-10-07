@@ -5,7 +5,7 @@
   "sourceOrigin": "migrated-repository",
   "originalRepoUrl": "https://github.com/ThunderXD11/engse203-student-labs-68543210017-8",
   "originalCommit": "18b18ea",
-  "pullRequestUrl": "",
+  "pullRequestUrl": "https://github.com/ThunderXD11/engse203-student-labs-68543210017-8/pull/10",
   "submissionTag": "lab-07-submission-v1",
   "testStatus": "pass",
   "notes": "พัฒนาและปรับปรุง REST API สำหรับระบบแจ้งปัญหาพื้นที่ส่วนกลาง โดยเพิ่มการจัดการ CORS และ environment configuration เชื่อมต่อ Frontend กับ API ผ่าน API client จัดทำ API Contract และเขียน Automated Test ด้วย Supertest ครอบคลุม GET, POST, การตรวจสอบข้อมูล, 404 และ CORS พร้อมตรวจสอบงานด้วย checker โดย CP09–CP16 ผ่านครบตามรายการที่กำหนด และ Automated Test ผ่าน 6/6 เคส"

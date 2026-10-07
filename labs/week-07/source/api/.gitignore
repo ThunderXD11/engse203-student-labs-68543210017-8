@@ -1,4 +1,3 @@
 node_modules/
-data/requests.json
 .env
-.DS_Store
+.env.local
