@@ -1,0 +1,12 @@
+{
+  "week": "week-05",
+  "title": "Campus Service Request Management",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/Nonthachai09/engse203-student-labs-68543210012-9.git",
+  "originalCommit": "abc12345",
+  "pullRequestUrl": "https://github.com/Nonthachai09/engse203-student-labs-68543210012-9/pull/7",
+  "submissionTag": "lab-05-submission-v1",
+  "testStatus": "pass",
+  "notes": "พัฒนาระบบแจ้งปัญหาพื้นที่ส่วนกลางด้วย React และ React Router พร้อมจัดการข้อมูลผ่าน Service และ localStorage รองรับการสร้าง ลบ ค้นหา ดูรายละเอียด และกู้คืนข้อมูลคำร้อง"
+}
