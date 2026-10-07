@@ -11,6 +11,7 @@ function RequestDetailPage() {
   const [request, setRequest] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [reloadKey, reload] = useManualReload();
+  const [updating, setUpdating] = useState(false);
 
   useEffect(() => {
     let ignore = false;
@@ -26,6 +27,18 @@ function RequestDetailPage() {
     });
     return () => { ignore = true; };
   }, [requestId, reloadKey]);
+
+  async function handleChangeStatus(nextStatus) {
+  setUpdating(true);
+  try {
+    const updated = await updateRequestStatus(request.id, nextStatus);
+    setRequest(updated); // อัปเดตด้วยข้อมูลที่ส่งกลับจาก API
+  } catch (error) {
+    setError(error.message);
+  } finally {
+    setUpdating(false);
+  }
+  }
 
   return (
     <section data-testid="page-request-detail">

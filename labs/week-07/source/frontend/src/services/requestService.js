@@ -54,7 +54,10 @@ export async function addRequest(requestInput) {
  * body: { status }
  */
 export async function updateRequestStatus(requestId, status) {
-  return apiFetch(`/api/requests/${encodeURIComponent(requestId)}`, { method: 'PUT', body: JSON.stringify({ status }) }); 
+  return apiFetch(`/api/requests/${encodeURIComponent(requestId)}`, {
+    method: 'PUT',
+    body: JSON.stringify({ status }),
+  });
 }
 
 /**
