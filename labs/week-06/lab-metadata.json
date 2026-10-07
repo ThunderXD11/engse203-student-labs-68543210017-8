@@ -1,0 +1,12 @@
+{
+  "week": "week-06",
+  "title": "Campus Service Request Management API",
+  "status": "submitted",
+  "sourceOrigin": "migrated-repository",
+  "originalRepoUrl": "https://github.com/Nonthachai09/engse203-student-labs-68543210012-9.git",
+  "originalCommit": "18b18ea",
+  "pullRequestUrl": "https://github.com/Nonthachai09/engse203-student-labs-68543210012-9/pull/10",
+  "submissionTag": "lab-06-submission-v1",
+  "testStatus": "pass",
+  "notes": "พัฒนา REST API สำหรับระบบแจ้งปัญหาพื้นที่ส่วนกลางด้วย Express รองรับการเรียกดูรายการคำร้อง การค้นหาคำร้องตามรหัส การสร้างคำร้อง การเปลี่ยนสถานะ และการลบคำร้อง พร้อมจัดเก็บข้อมูลลงไฟล์ JSON และทดสอบ API ด้วย Postman"
+}
